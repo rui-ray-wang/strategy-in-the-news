@@ -582,8 +582,7 @@
   }
 
   async function fetchPosts() {
-    if (!configured()) return [];
-    // Raw URL is faster and unauthenticated for public repos
+    // Raw URL is public — no token needed for reading
     const res = await fetch(ghRawUrl());
     if (res.status === 404) return [];   // file not created yet
     if (!res.ok) throw new Error(res.status);
