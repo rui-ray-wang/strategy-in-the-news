@@ -18,8 +18,8 @@
 1. Fill in the article **headline, source, and date**
 2. Start with what **caught your attention**, not a framework
 3. Select one or two **lenses** from the buttons (a hint box will appear to guide your thinking)
-4. Write your **analysis** — explain the logic behind the strategic actions in the news, not just describing what happened
-5. Write a **question you wonder after reading the news** — something with no obvious answer
+4. Write your **analysis** — explain the logic behind the strategic actions in the news rather than just describing what happened
+5. Write a **question the article left you thinking about** — something the news made you curious or uncertain about.
 6. Click **Submit & Share →**
 
 You'll see "Post submitted! ✓" when it goes through.
