@@ -4,21 +4,21 @@
     "headline": "test2 without keytest2 without key",
     "source": "test2 without keytest2 without key",
     "date": "test2 without key",
-    "hook": "test2 without keytest2 without keytest2 without keytest2 without keytest2 without keytest2 without keytest2 without keytest2 without key",
+    "hook": "test2 without keytest2 without keytest2 without keytest2 without key",
     "frameworks": "Focused Strategy, Blue Ocean",
-    "analysis": "test2 without keytest2 without keytest2 without keytest2 without keytest2 without keytest2 without keytest2 without keytest2 without keytest2 without keytest2 without key",
+    "analysis": "test2 without keytest2 without keytest2 without keytest2 without key",
     "question": "test2 without keytest2 without keytest2 without key?",
     "ts": "Apr 1, 2026, 2:53 AM"
   },
   {
-    "name": "test2",
-    "headline": "test2test2test2",
-    "source": "test2test2",
-    "date": "test2",
-    "hook": "test2test2test2test2test2test2test2",
-    "frameworks": "Five Forces, RBV",
-    "analysis": "test2test2test2test2test2test2test2test2test2test2",
-    "question": "test2test2test2test2test2test2test2",
-    "ts": "Apr 1, 2026, 2:45 AM"
+    "name": "Instructor Example",
+    "headline": "Apple picks Google's Gemini to power a rebuilt Siri — paying ~$1 billion per year",
+    "source": "Bloomberg",
+    "date": "Jan 12, 2026",
+    "hook": "Apple already pays Google roughly $20 billion a year to be the default search engine on every iPhone. This deal adds another billion for AI. The most profitable hardware company in history has now made Google the invisible backbone of its two most important user interfaces.",
+    "frameworks": "Five Forces, RBV, Differentiation",
+    "analysis": "Five Forces — Supplier Power: Apple and Google have long had a mutually dependent relationship. Google needed iPhone distribution; Apple needed search revenue. The bargaining looked roughly balanced. This deal changes that. Apple now relies on Google for search and for the core intelligence layer of Siri. Google has become something closer to essential infrastructure for the iPhone experience. When a supplier becomes infrastructure, the buyer's exit options shrink — and pricing power in future negotiations shifts accordingly. RBV: Apple's chip design, its OS integration, its manufacturing relationships — these remain genuinely hard to replicate. What this story reveals is that the model layer requires a fundamentally different organizational capability: massive datasets, rapid iteration on open-ended language tasks, comfort with probabilistic output. Apple's culture — perfectionism, secrecy, tight release cycles — may be precisely what made building a frontier LLM difficult. A company's deepest strengths can also define the boundary of what it can build.",
+    "question": "Apple's differentiation has historically required controlling every layer of the experience. If the intelligence layer is now Google's, what exactly is Apple differentiating on — and is that enough to justify the premium over Android?",
+    "ts": "Apr 1, 2026, 10:00 AM"
   }
 ]
