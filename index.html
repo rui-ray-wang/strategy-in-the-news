@@ -174,6 +174,8 @@
     .expand-btn { font-size: 12px; color: var(--blue); background: none; border: none; cursor: pointer; padding: 0; margin-top: 6px; font-weight: 600; }
     .peer-full  { display: none; }
     .peer-full.open { display: block; }
+    .peer-section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-top: 14px; margin-bottom: 4px; }
+    .peer-section-body  { font-size: 13.5px; color: var(--ink); line-height: 1.75; white-space: pre-wrap; }
     .peers-empty { text-align: center; padding: 40px 20px; color: var(--muted); font-size: 14px; }
 
     /* ── Preview modal ── */
@@ -570,9 +572,10 @@
           <div class="peer-headline">${esc(p.headline)}</div>
           ${p.frameworks ? `<div class="peer-tags">${p.frameworks.split(', ').map(f => `<span class="peer-tag">${esc(f)}</span>`).join('')}</div>` : ''}
           <div class="peer-excerpt">${esc((p.hook||'').slice(0,180))}${(p.hook||'').length > 180 ? '…' : ''}</div>
-          <button class="expand-btn" onclick="togglePeer(${i})">Read full analysis ↓</button>
+          <button class="expand-btn" onclick="togglePeer(${i})">Read full post ↓</button>
           <div class="peer-full" id="peer-full-${i}">
-            <div style="margin-top:12px;font-size:14px;color:var(--ink);line-height:1.7;white-space:pre-wrap;">${esc(p.analysis||'')}</div>
+            ${p.hook ? `<div class="peer-section-label">What caught my attention</div><div class="peer-section-body">${esc(p.hook)}</div>` : ''}
+            ${p.analysis ? `<div class="peer-section-label">Analysis</div><div class="peer-section-body">${esc(p.analysis)}</div>` : ''}
             ${p.question ? `<div class="peer-question">💬 "${esc(p.question)}"</div>` : ''}
           </div>
         </div>`).join('');
