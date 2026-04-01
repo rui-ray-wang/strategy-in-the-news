@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "name": "Rui Wang",
+    "headline": "After Apple's internally-built Siri AI failed quality tests (reportedly \"failing up to a third of the time\"), Apple chose Google's Gemini model to power a completely new version of Siri.",
+    "source": "CNBC",
+    "date": "Jan 12, 2026",
+    "hook": "Google pays Apple roughly $20 billion a year for the right to be the default search engine on every iPhone. That arrangement made Apple one of Google's most important distribution partners, and gave Apple a revenue stream that required no engineering. Now Apple is turning to the same company to supply the intelligence layer of a rebuilt Siri. The direction of dependency has shifted: Apple used to collect from Google; now it is paying Google for a capability it could not build itself.",
+    "frameworks": "Five Forces, RBV",
+    "analysis": "1. Supplier Power: Apple and Google have long had a mutually dependent relationship. Google needed iPhone distribution; Apple needed search revenue. The bargaining looked roughly balanced. This deal changes that. Apple now relies on Google for search and for the core intelligence layer of Siri. Google has become something closer to essential infrastructure for the iPhone experience. When a supplier becomes infrastructure, the buyer (Apple)'s exit options shrink, and bargaining power in future negotiations is weakened accordingly. \n\n2. RBV: Apple's chip design, its OS integration, its manufacturing relationships — these remain genuinely hard to replicate. What this story reveals is that the model layer requires a fundamentally different organizational capability: massive datasets, rapid iteration on open-ended language tasks, comfort with probabilistic output. Apple's culture, perfectionism, secrecy, tight release cycles, may be precisely what made building a frontier LLM difficult. A company's deepest strengths can also define the boundary/limits of what it can build.",
+    "question": "Apple's differentiation has historically required controlling every layer of the experience. If the intelligence layer is now Google's, what exactly is Apple differentiating on and more importantly, is that enough to justify the premium over Android?",
+    "ts": "Apr 1, 2026, 4:17 AM"
+  }
+]
