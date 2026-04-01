@@ -16,19 +16,13 @@
 ## Submitting your post
 
 1. Fill in the article **headline, source, and date**
-2. Write what **caught your attention** — start with your reaction, not a framework
+2. Start with what **caught your attention**, not a framework
 3. Select one or two **lenses** from the buttons (a hint box will appear to guide your thinking)
-4. Write your **analysis** — explain the competitive logic, not just what happened
-5. Write a **question for class** — something with no obvious answer
+4. Write your **analysis** — explain the logic behind the strategic actions in the news, not just describing what happened
+5. Write a **question you wonder after reading the news** — something with no obvious answer
 6. Click **Submit & Share →**
 
 You'll see "Post submitted! ✓" when it goes through.
-
----
-
-## Reading peer posts
-
-Click **👥 Peer Posts** at the top of the page to browse what your classmates have submitted. Click **"Read full analysis ↓"** on any card to expand the full post. No token needed — peer posts are visible to everyone.
 
 ---
 
@@ -38,11 +32,15 @@ Click **Preview post** to see a formatted version of your analysis, then click *
 
 ---
 
+## Reading peer posts
+
+Click **👥 Peer Posts** at the top of the page to browse what your classmates have submitted. Click **"Read full analysis ↓"** on any card to expand the full post.
+
+---
+
 ## Tips
 
-- Your draft auto-saves in your browser as you type — if you close the tab and come back, your work will still be there
-- You can submit more than one post — each news story is a separate entry
-- The token only works for this course site — keep it to yourself
+The token only works for this strategy-in-the-news site — keep it to yourself
 
 ---
 
