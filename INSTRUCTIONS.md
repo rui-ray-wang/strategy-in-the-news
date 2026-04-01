@@ -41,7 +41,7 @@ Click **Preview post** to see a formatted version of your analysis, then click *
 ## Tips
 
 - Your draft auto-saves in your browser as you type — if you close the tab and come back, your work will still be there
-- You can re-submit to revise — it will update your existing entry
+- You can submit more than one post — each news story is a separate entry
 - The token only works for this course site — keep it to yourself
 
 ---
