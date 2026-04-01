@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategy in the News</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue:   #1d4ed8;
+      --blue-lt:#eff6ff;
+      --ink:    #111827;
+      --muted:  #6b7280;
+      --border: #e5e7eb;
+      --bg:     #f3f4f6;
+      --white:  #ffffff;
+      --green:  #059669;
+      --gold:   #d97706;
+      --red:    #dc2626;
+      --r:      10px;
+      --shadow: 0 4px 24px rgba(0,0,0,.10);
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--ink); font-size: 15px; line-height: 1.6; min-height: 100vh; }
+
+    /* ── Header ── */
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--blue); color: #fff;
+      padding: 0 24px; height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,.18);
+    }
+    .site-header h1 { font-size: 17px; font-weight: 700; letter-spacing: -.01em; }
+    .site-header p  { font-size: 12px; opacity: .7; }
+    .header-btns { display: flex; gap: 8px; }
+    .hbtn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 7px 14px; border-radius: 7px; font-size: 13px; font-weight: 600;
+      cursor: pointer; border: none; font-family: inherit; transition: background .15s;
+    }
+    .hbtn-ghost { background: rgba(255,255,255,.15); color: #fff; }
+    .hbtn-ghost:hover { background: rgba(255,255,255,.25); }
+    .hbtn-white { background: #fff; color: var(--blue); }
+    .hbtn-white:hover { background: #e0eaff; }
+    .peer-count {
+      background: var(--gold); color: #fff; border-radius: 20px;
+      padding: 1px 7px; font-size: 11px; font-weight: 700;
+    }
+
+    /* ── Page layout ── */
+    .page { max-width: 660px; margin: 36px auto 60px; padding: 0 20px; }
+
+    /* ── Form card ── */
+    .form-card { background: var(--white); border-radius: var(--r); box-shadow: var(--shadow); overflow: hidden; }
+    .form-card-header { padding: 22px 28px 0; }
+    .form-card-header h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 3px; }
+    .form-card-header p  { font-size: 13px; color: var(--muted); }
+    .form-body { padding: 22px 28px 28px; }
+
+    /* ── Form fields ── */
+    .field { margin-bottom: 18px; }
+    .field:last-child { margin-bottom: 0; }
+    .field label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; }
+    .field .sub  { font-weight: 400; color: var(--muted); font-size: 12px; }
+    input[type="text"], textarea {
+      width: 100%; padding: 9px 12px;
+      border: 1.5px solid var(--border); border-radius: 7px;
+      font-family: inherit; font-size: 14px; color: var(--ink); background: var(--white);
+      transition: border-color .15s;
+      resize: vertical;
+    }
+    input[type="text"]:focus, textarea:focus { outline: none; border-color: var(--blue); }
+    textarea { min-height: 90px; }
+    .row-3 { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; }
+    @media (max-width: 520px) { .row-3 { grid-template-columns: 1fr; } }
+
+    /* ── Divider ── */
+    .sep { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+
+    /* ── Pill framework selector ── */
+    .pills { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 10px; }
+    .pill {
+      padding: 5px 13px; border-radius: 20px; font-size: 12.5px; font-weight: 600;
+      border: 1.5px solid var(--border); background: var(--white); color: var(--muted);
+      cursor: pointer; transition: all .12s; user-select: none;
+    }
+    .pill:hover { border-color: var(--blue); color: var(--blue); }
+    .pill.on { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+    .fw-hint { display: none; background: var(--blue-lt); border: 1px solid #bfdbfe; border-radius: 7px; padding: 11px 14px; font-size: 13px; color: #1e3a8a; margin-top: 4px; }
+    .fw-hint.show { display: block; }
+    .fw-hint ul { margin: 6px 0 0 16px; }
+    .fw-hint li { margin-bottom: 3px; }
+
+    /* ── Action buttons ── */
+    .form-actions { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+    .btn {
+      padding: 10px 22px; border-radius: 7px; font-size: 14px; font-weight: 600;
+      cursor: pointer; border: none; font-family: inherit; transition: all .15s;
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { background: #1a3fb5; }
+    .btn-outline { background: transparent; color: var(--blue); border: 1.5px solid var(--blue); }
+    .btn-outline:hover { background: var(--blue-lt); }
+    .btn-ghost  { background: transparent; color: var(--muted); border: 1.5px solid var(--border); }
+    .btn-ghost:hover { border-color: var(--muted); }
+
+    /* ── Draft badge ── */
+    .draft-badge { font-size: 11px; color: var(--muted); margin-top: 10px; min-height: 16px; }
+    .draft-badge.saved { color: var(--green); }
+
+    /* ── Toast ── */
+    #toast {
+      position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(80px);
+      background: #111; color: #fff; padding: 10px 22px; border-radius: 25px;
+      font-size: 13px; font-weight: 600; z-index: 200; opacity: 0;
+      transition: transform .3s ease, opacity .3s ease; pointer-events: none;
+    }
+    #toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+    #toast.success { background: var(--green); }
+    #toast.error   { background: var(--red); }
+
+    /* ── Modal system ── */
+    .overlay {
+      display: none; position: fixed; inset: 0; z-index: 100;
+      background: rgba(0,0,0,.45); align-items: flex-start; justify-content: center;
+      padding: 24px 16px; overflow-y: auto;
+    }
+    .overlay.open { display: flex; }
+    .modal {
+      background: var(--white); border-radius: var(--r); box-shadow: var(--shadow);
+      width: 100%; max-width: 720px; animation: slideUp .25s ease; margin: auto;
+    }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: none; opacity: 1; } }
+    .modal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 24px; border-bottom: 1px solid var(--border);
+    }
+    .modal-header h3 { font-size: 16px; font-weight: 700; }
+    .close-btn {
+      width: 30px; height: 30px; border-radius: 6px; border: none;
+      background: var(--bg); cursor: pointer; font-size: 18px; color: var(--muted);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .close-btn:hover { background: var(--border); }
+    .modal-body { padding: 24px; }
+
+    /* ── Instructor example ── */
+    .ex-source { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+    .ex-title  { font-size: 1.05rem; font-weight: 700; line-height: 1.35; margin-bottom: 8px; }
+    .ex-summary { font-size: 13.5px; color: var(--muted); margin-bottom: 14px; }
+    .ex-tags   { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 18px; }
+    .ex-tag    { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; padding: 3px 9px; border-radius: 20px; background: var(--blue-lt); color: var(--blue); }
+    .ex-block  { padding: 16px 0; border-top: 1px solid var(--border); }
+    .ex-block:first-of-type { border-top: none; padding-top: 0; }
+    .ex-q { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 7px; }
+    .ex-a { font-size: 14px; color: var(--ink); line-height: 1.7; }
+    .ex-a strong { color: #1e3a8a; }
+    .callout { background: var(--blue-lt); border-left: 3px solid var(--blue); border-radius: 0 6px 6px 0; padding: 11px 15px; font-size: 13px; color: #1e3a8a; margin-top: 10px; line-height: 1.6; }
+    .callout-gold { background: #fffbeb; border-left-color: var(--gold); color: #78350f; }
+
+    /* ── Peer posts ── */
+    .peers-grid { display: grid; gap: 14px; }
+    .peer-card { border: 1px solid var(--border); border-radius: var(--r); padding: 18px 20px; background: var(--white); }
+    .peer-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; gap: 12px; }
+    .peer-name { font-size: 14px; font-weight: 700; }
+    .peer-date { font-size: 11px; color: var(--muted); white-space: nowrap; }
+    .peer-headline { font-size: 13.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; line-height: 1.35; }
+    .peer-tags  { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 10px; }
+    .peer-tag   { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; padding: 2px 8px; border-radius: 20px; background: #f0f4ff; color: var(--blue); }
+    .peer-excerpt { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .peer-question { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13px; color: var(--ink); font-style: italic; }
+    .expand-btn { font-size: 12px; color: var(--blue); background: none; border: none; cursor: pointer; padding: 0; margin-top: 6px; font-weight: 600; }
+    .peer-full  { display: none; }
+    .peer-full.open { display: block; }
+    .peers-empty { text-align: center; padding: 40px 20px; color: var(--muted); font-size: 14px; }
+
+    /* ── Preview modal ── */
+    .preview-row { margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+    .preview-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .preview-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 4px; }
+    .preview-val   { font-size: 14px; color: var(--ink); white-space: pre-wrap; line-height: 1.65; }
+    .print-actions { display: flex; gap: 10px; margin-top: 20px; }
+
+
+    /* ── Print ── */
+    @media print {
+      .site-header, .form-card, .setup-toggle, #setup-panel, .overlay { display: none !important; }
+      #overlay-preview { display: block !important; position: static; background: none; padding: 0; }
+      .modal { box-shadow: none; max-width: 100%; }
+      .modal-header .close-btn, .print-actions { display: none !important; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ───────────────────────────────────────── -->
+<header class="site-header">
+  <div>
+    <h1>Strategy in the News</h1>
+    <p>Strategic Management · Discussion Post</p>
+  </div>
+  <div class="header-btns">
+    <button class="hbtn hbtn-ghost" onclick="openModal('overlay-example')">📖 Instructor Example</button>
+    <button class="hbtn hbtn-white" onclick="openPeers()" id="peer-btn">
+      👥 Peer Posts <span class="peer-count" id="peer-count">—</span>
+    </button>
+    <button class="hbtn hbtn-ghost" onclick="promptToken()" title="Instructor setup">🔑</button>
+  </div>
+</header>
+
+
+<!-- ── MAIN FORM ─────────────────────────────────────── -->
+<div class="page">
+  <div class="form-card">
+    <div class="form-card-header">
+      <h2>Your Discussion Post</h2>
+      <p>Find a news story that caught your attention, connect it to course concepts, and share your thinking.</p>
+    </div>
+    <div class="form-body">
+
+      <div class="field">
+        <label>Your name</label>
+        <input type="text" id="f-name" placeholder="Full name" oninput="autosave()" />
+      </div>
+
+      <hr class="sep">
+
+      <div class="field">
+        <label>Article headline</label>
+        <input type="text" id="f-headline" placeholder="Paste the headline exactly" oninput="autosave()" />
+      </div>
+      <div class="row-3">
+        <div class="field">
+          <label>Source</label>
+          <input type="text" id="f-source" placeholder="e.g., WSJ, Bloomberg" oninput="autosave()" />
+        </div>
+        <div class="field">
+          <label>Date</label>
+          <input type="text" id="f-date" placeholder="e.g., Apr 1, 2026" oninput="autosave()" />
+        </div>
+      </div>
+
+      <hr class="sep">
+
+      <div class="field">
+        <label>What caught your attention? <span class="sub">— Start here, not with a framework</span></label>
+        <textarea id="f-hook" placeholder="What surprised, puzzled, or struck you about this story? Why does it feel strategically significant?" oninput="autosave()"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Lens <span class="sub">— Pick one or two frameworks that best illuminate this story</span></label>
+        <div class="pills" id="fw-pills">
+          <div class="pill" data-fw="external">External Environment</div>
+          <div class="pill" data-fw="fiveforces">Five Forces</div>
+          <div class="pill" data-fw="rbv">RBV</div>
+          <div class="pill" data-fw="cost">Cost Leadership</div>
+          <div class="pill" data-fw="diff">Differentiation</div>
+          <div class="pill" data-fw="focus">Focused Strategy</div>
+          <div class="pill" data-fw="blueocean">Blue Ocean</div>
+        </div>
+
+        <div class="fw-hint" id="hint-external"><ul>
+          <li>Which macro force is driving this — political, economic, technological, regulatory?</li>
+          <li>Is the firm seizing an opportunity or responding to a threat?</li>
+          <li>How might this trend reshape the industry beyond this one firm?</li>
+        </ul></div>
+        <div class="fw-hint" id="hint-fiveforces"><ul>
+          <li>Which force is most affected — rivalry, new entrants, substitutes, buyer power, supplier power?</li>
+          <li>Does this move strengthen or weaken the firm's position within that force?</li>
+          <li>How does the balance of power shift for others in the industry?</li>
+        </ul></div>
+        <div class="fw-hint" id="hint-rbv"><ul>
+          <li>What specific resource or capability is at the center of this story?</li>
+          <li>Is it truly rare and hard to imitate — or being revealed as less unique than assumed?</li>
+          <li>Does this move build, protect, or erode competitive advantage?</li>
+        </ul></div>
+        <div class="fw-hint" id="hint-cost"><ul>
+          <li>How is the firm using scale, efficiency, or process to undercut rivals on cost?</li>
+          <li>What does this tell us about the durability of that cost position?</li>
+          <li>Is there risk the advantage gets competed away or copied?</li>
+        </ul></div>
+        <div class="fw-hint" id="hint-diff"><ul>
+          <li>What makes this firm's offering meaningfully different — does this news strengthen or weaken that?</li>
+          <li>Is differentiation perceived (brand, trust) or structural (unique capabilities)?</li>
+          <li>Can rivals close the gap, or is there real distance here?</li>
+        </ul></div>
+        <div class="fw-hint" id="hint-focus"><ul>
+          <li>Which segment is the firm targeting — and why is it distinct from the mainstream?</li>
+          <li>Does the focus let the firm serve that segment better than a broad competitor could?</li>
+          <li>Is there risk the niche gets squeezed from above or below?</li>
+        </ul></div>
+        <div class="fw-hint" id="hint-blueocean"><ul>
+          <li>Is the firm escaping competition rather than beating it? What factors are they raising, reducing, or creating?</li>
+          <li>Is there a genuinely new value curve here, or just repositioning?</li>
+          <li>Who is the new buyer being unlocked, and from where?</li>
+        </ul></div>
+      </div>
+
+      <div class="field">
+        <label>Your analysis <span class="sub">— use your lens to explain why the firm moved, what it's betting on, and what it means for rivals</span></label>
+        <textarea id="f-analysis" style="min-height:120px;" placeholder="Push past describing what happened. Explain the competitive logic: Why this move? What tradeoff is being made? Who wins and loses — and why?" oninput="autosave()"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Your question for class <span class="sub">— no obvious answer; should provoke genuine debate</span></label>
+        <textarea id="f-question" style="min-height:68px;" placeholder="e.g., If a firm's differentiation is built on a capability it no longer owns, is it still differentiating — or just branding?" oninput="autosave()"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" onclick="submitPost()">Submit &amp; Share →</button>
+        <button class="btn btn-outline" onclick="showPreview()">Preview post</button>
+        <button class="btn btn-ghost" onclick="clearForm()">Clear</button>
+      </div>
+      <div class="draft-badge" id="draft-badge">Draft auto-saved</div>
+
+    </div>
+  </div>
+
+
+
+<!-- ── INSTRUCTOR EXAMPLE MODAL ──────────────────────── -->
+<div class="overlay" id="overlay-example" onclick="closeOnBg(event,'overlay-example')">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>📖 Instructor Example</h3>
+      <button class="close-btn" onclick="closeModal('overlay-example')">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="ex-source">TechCrunch / Bloomberg · January 12, 2026</p>
+      <p class="ex-title">Apple picks Google's Gemini to power a rebuilt Siri — paying ~$1 billion per year</p>
+      <p class="ex-summary">After Apple's internally-built Siri AI failed quality tests (reportedly "failing up to a third of the time"), Apple chose Google's Gemini model to power a completely new version of Siri. The deal adds to the existing ~$20B/year Apple already pays Google to remain its default search engine.</p>
+      <div class="ex-tags">
+        <span class="ex-tag">Five Forces</span>
+        <span class="ex-tag">RBV</span>
+        <span class="ex-tag">Differentiation</span>
+      </div>
+
+      <div class="ex-block">
+        <div class="ex-q">What caught your attention?</div>
+        <div class="ex-a">
+          Apple already pays Google roughly $20 billion a year to be the default search engine on every iPhone. This deal adds another billion for AI. The most profitable hardware company in history has now made Google the invisible backbone of its two most important user interfaces. Apple has spent thirty years building a reputation on owning the experience end to end — the chip, the OS, the app store, the store where you buy the device. Here, they couldn't. And they said so publicly. Craig Federighi told reporters Siri was <em>"failing up to a third of the time"</em> in internal tests. That kind of admission is rare. It tells you the internal pressure to ship something competitive was greater than the instinct to protect the image.
+        </div>
+      </div>
+
+      <div class="ex-block">
+        <div class="ex-q">Framework analysis</div>
+        <div class="ex-a">
+          <strong>Five Forces — Supplier Power:</strong> Apple and Google have long had a mutually dependent relationship. Google needed iPhone distribution; Apple needed search revenue. The bargaining looked roughly balanced. This deal changes that. Apple now relies on Google for search and for the core intelligence layer of Siri. Google has become something closer to essential infrastructure for the iPhone experience. When a supplier becomes infrastructure, the buyer's exit options shrink — and pricing power in future negotiations shifts accordingly.<br><br>
+          <strong>RBV:</strong> Apple's chip design, its OS integration, its manufacturing relationships — these remain genuinely hard to replicate. What this story reveals is that the model layer requires a fundamentally different organizational capability: massive datasets, rapid iteration on open-ended language tasks, comfort with probabilistic output. Apple's culture — perfectionism, secrecy, tight release cycles — may be precisely what made building a frontier LLM difficult. <strong>A company's deepest strengths can also define the boundary of what it can build.</strong>
+        </div>
+        <div class="callout">The analytical move here is to ask not just which framework applies, but what the framework lets you <em>see</em> that you couldn't see before. Five Forces shows you a power shift. RBV shows you a capability boundary. Together they raise a more interesting question than either does alone.</div>
+      </div>
+
+      <div class="ex-block">
+        <div class="ex-q">What is Apple betting on — and where does that bet get tested?</div>
+        <div class="ex-a">
+          Apple's differentiation has never been about having the fastest processor or the most features. It's been about the experience feeling seamless, premium, and trustworthy. The bet here is that privacy becomes the differentiator in AI. Apple's system processes queries through what it calls Private Cloud Compute — requests leave the device but are never stored or tied to a user identity. Google, Microsoft, and Meta cannot make that claim credibly, because their revenue models depend on knowing who you are.<br><br>
+          The bet gets tested at a specific moment: when a Siri response is wrong, slow, or embarrassing, and the user doesn't know or care that Gemini is underneath it. <strong>Apple owns the brand; Google owns the model.</strong> If the AI experience disappoints, Apple absorbs the reputational cost. That's the structural risk in any differentiation strategy built on a licensed capability — you're staking your position on something you don't fully control.
+        </div>
+        <div class="callout callout-gold"><strong>Question for class:</strong> Apple's differentiation has historically required controlling every layer of the experience. If the intelligence layer is now Google's, what exactly is Apple differentiating on — and is that enough to justify the premium over Android?</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── PEER POSTS MODAL ───────────────────────────────── -->
+<div class="overlay" id="overlay-peers" onclick="closeOnBg(event,'overlay-peers')">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>👥 Peer Posts</h3>
+      <button class="close-btn" onclick="closeModal('overlay-peers')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div id="peers-container"><p class="peers-empty">No posts yet. Be the first to submit!</p></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── PREVIEW MODAL ─────────────────────────────────── -->
+<div class="overlay" id="overlay-preview" onclick="closeOnBg(event,'overlay-preview')">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Your Post</h3>
+      <button class="close-btn" onclick="closeModal('overlay-preview')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div id="preview-content"></div>
+      <div class="print-actions">
+        <button class="btn btn-primary" onclick="window.print()">🖨 Print / Save PDF</button>
+        <button class="btn btn-outline" onclick="closeModal('overlay-preview')">← Back to edit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- toast -->
+<div id="toast"></div>
+
+
+<script>
+  // ── GitHub config — fill in before deploying ──────────────
+  const GH = {
+    owner:  'rui-ray-wang',
+    repo:   'strategy-in-the-news',
+    branch: 'master',
+    file:   'responses/posts.json',
+    token:  localStorage.getItem('sitn-gh-token') || '',
+  };
+  const configured = () => GH.owner && GH.repo && GH.token;
+
+  // ── Framework pills ───────────────────────────────────────
+  document.querySelectorAll('.pill[data-fw]').forEach(p => {
+    p.addEventListener('click', () => {
+      p.classList.toggle('on');
+      const box = document.getElementById('hint-' + p.dataset.fw);
+      if (box) box.classList.toggle('show', p.classList.contains('on'));
+      autosave();
+    });
+  });
+
+  // ── Auto-save to localStorage ─────────────────────────────
+  let saveTimer;
+  function autosave() {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => {
+      const draft = getFormData();
+      localStorage.setItem('sitn-draft', JSON.stringify(draft));
+      const badge = document.getElementById('draft-badge');
+      badge.textContent = 'Draft saved · ' + new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+      badge.className = 'draft-badge saved';
+    }, 800);
+  }
+
+  function getFormData() {
+    return {
+      name:      document.getElementById('f-name').value.trim(),
+      headline:  document.getElementById('f-headline').value.trim(),
+      source:    document.getElementById('f-source').value.trim(),
+      date:      document.getElementById('f-date').value.trim(),
+      hook:      document.getElementById('f-hook').value.trim(),
+      frameworks: getSelectedFW(),
+      analysis:  document.getElementById('f-analysis').value.trim(),
+      question:  document.getElementById('f-question').value.trim(),
+    };
+  }
+
+  function getSelectedFW() {
+    return Array.from(document.querySelectorAll('.pill.on')).map(p => p.textContent).join(', ');
+  }
+
+  // Load draft on page open
+  (function loadDraft() {
+    const raw = localStorage.getItem('sitn-draft');
+    if (!raw) return;
+    try {
+      const d = JSON.parse(raw);
+      const set = (id, val) => { const el = document.getElementById(id); if (el && val) el.value = val; };
+      set('f-name', d.name); set('f-headline', d.headline);
+      set('f-source', d.source); set('f-date', d.date);
+      set('f-hook', d.hook); set('f-analysis', d.analysis); set('f-question', d.question);
+      if (d.frameworks) d.frameworks.split(', ').forEach(fw => {
+        document.querySelectorAll('.pill').forEach(p => {
+          if (p.textContent === fw) {
+            p.classList.add('on');
+            const box = document.getElementById('hint-' + p.dataset.fw);
+            if (box) box.classList.add('show');
+          }
+        });
+      });
+    } catch(e) {}
+  })();
+
+  // ── GitHub helpers ────────────────────────────────────────
+  const ghApiUrl = () =>
+    `https://api.github.com/repos/${GH.owner}/${GH.repo}/contents/${GH.file}`;
+  const ghRawUrl = () =>
+    `https://raw.githubusercontent.com/${GH.owner}/${GH.repo}/${GH.branch}/${GH.file}?t=${Date.now()}`;
+  const ghHeaders = () => ({
+    'Authorization': `Bearer ${GH.token}`,
+    'Accept': 'application/vnd.github+json',
+    'Content-Type': 'application/json',
+  });
+
+  // Encode to base64, handling Unicode safely
+  const toBase64 = str => btoa(unescape(encodeURIComponent(str)));
+
+  // ── Submit post ───────────────────────────────────────────
+  async function submitPost() {
+    const d = getFormData();
+    if (!d.name)     { toast('Please add your name', 'error'); return; }
+    if (!d.headline) { toast('Please add the article headline', 'error'); return; }
+    if (!d.analysis) { toast('Please add your analysis', 'error'); return; }
+    if (!configured()) { toast('Site not configured — contact your instructor', 'error'); return; }
+
+    const btn = document.querySelector('[onclick="submitPost()"]');
+    btn.disabled = true; btn.textContent = 'Submitting…';
+    try {
+      await ghWrite({ ...d, ts: new Date().toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) });
+      localStorage.removeItem('sitn-draft');
+      toast('Post submitted! ✓', 'success');
+      document.getElementById('draft-badge').textContent = 'Submitted';
+      document.getElementById('draft-badge').className = 'draft-badge saved';
+      refreshPeerCount();
+    } catch (err) {
+      toast('Could not submit — try again in a moment', 'error');
+      console.error(err);
+    } finally {
+      btn.disabled = false; btn.textContent = 'Submit & Share →';
+    }
+  }
+
+  // Read current file from GitHub, prepend new post, write back.
+  // Retries up to 3 times on 409 (concurrent write conflict).
+  async function ghWrite(newPost, attempt = 0) {
+    // Get current content + SHA
+    const getRes = await fetch(ghApiUrl(), { headers: ghHeaders() });
+    let sha = undefined, posts = [];
+    if (getRes.ok) {
+      const data = await getRes.json();
+      sha = data.sha;
+      posts = JSON.parse(decodeURIComponent(escape(atob(data.content.replace(/\n/g, '')))));
+    } else if (getRes.status !== 404) {
+      throw new Error(`GitHub GET ${getRes.status}`);
+    }
+
+    // Prepend and write
+    const updated = [newPost, ...posts];
+    const putRes = await fetch(ghApiUrl(), {
+      method: 'PUT',
+      headers: ghHeaders(),
+      body: JSON.stringify({
+        message: `Add post: ${newPost.name}`,
+        content: toBase64(JSON.stringify(updated, null, 2)),
+        branch:  GH.branch,
+        ...(sha ? { sha } : {}),
+      }),
+    });
+
+    if (putRes.status === 409 && attempt < 2) {
+      // Conflict: someone else wrote simultaneously — wait briefly and retry
+      await new Promise(r => setTimeout(r, 600 + Math.random() * 800));
+      return ghWrite(newPost, attempt + 1);
+    }
+    if (!putRes.ok) throw new Error(`GitHub PUT ${putRes.status}`);
+  }
+
+  // ── Peer posts ────────────────────────────────────────────
+  async function openPeers() {
+    openModal('overlay-peers');
+    const container = document.getElementById('peers-container');
+    container.innerHTML = '<p class="peers-empty" style="color:var(--muted)">Loading…</p>';
+    try {
+      const posts = await fetchPosts();
+      refreshPeerCount(posts.length);
+      if (!posts.length) {
+        container.innerHTML = '<p class="peers-empty">No posts yet — submit yours to be first!</p>';
+        return;
+      }
+      container.innerHTML = posts.map((p, i) => `
+        <div class="peer-card">
+          <div class="peer-card-header">
+            <span class="peer-name">${esc(p.name)}</span>
+            <span class="peer-date">${esc(p.ts || '')}</span>
+          </div>
+          <div class="peer-headline">${esc(p.headline)}</div>
+          ${p.frameworks ? `<div class="peer-tags">${p.frameworks.split(', ').map(f => `<span class="peer-tag">${esc(f)}</span>`).join('')}</div>` : ''}
+          <div class="peer-excerpt">${esc((p.hook||'').slice(0,180))}${(p.hook||'').length > 180 ? '…' : ''}</div>
+          <button class="expand-btn" onclick="togglePeer(${i})">Read full analysis ↓</button>
+          <div class="peer-full" id="peer-full-${i}">
+            <div style="margin-top:12px;font-size:14px;color:var(--ink);line-height:1.7;white-space:pre-wrap;">${esc(p.analysis||'')}</div>
+            ${p.question ? `<div class="peer-question">💬 "${esc(p.question)}"</div>` : ''}
+          </div>
+        </div>`).join('');
+    } catch {
+      container.innerHTML = '<p class="peers-empty">Could not load posts.</p>';
+    }
+  }
+
+  async function fetchPosts() {
+    if (!configured()) return [];
+    // Raw URL is faster and unauthenticated for public repos
+    const res = await fetch(ghRawUrl());
+    if (res.status === 404) return [];   // file not created yet
+    if (!res.ok) throw new Error(res.status);
+    return res.json();
+  }
+
+  function togglePeer(i) {
+    const el  = document.getElementById('peer-full-' + i);
+    const btn = el.previousElementSibling;
+    el.classList.toggle('open');
+    btn.textContent = el.classList.contains('open') ? 'Collapse ↑' : 'Read full analysis ↓';
+  }
+
+  async function refreshPeerCount(n) {
+    if (n === undefined) {
+      try { n = (await fetchPosts()).length; } catch { return; }
+    }
+    document.getElementById('peer-count').textContent = n;
+  }
+
+  // ── Preview ───────────────────────────────────────────────
+  function showPreview() {
+    const d = getFormData();
+    const rows = [
+      { label: 'Name',            val: d.name },
+      { label: 'Article',         val: [d.headline, d.source, d.date].filter(Boolean).join('  ·  ') },
+      { label: 'What caught my attention', val: d.hook },
+      { label: 'Framework lens',  val: d.frameworks },
+      { label: 'Analysis',        val: d.analysis },
+      { label: 'Question for class', val: d.question },
+    ].filter(r => r.val);
+
+    document.getElementById('preview-content').innerHTML = rows.map(r => `
+      <div class="preview-row">
+        <div class="preview-label">${r.label}</div>
+        <div class="preview-val">${esc(r.val)}</div>
+      </div>`).join('');
+    openModal('overlay-preview');
+  }
+
+  // ── Clear form ────────────────────────────────────────────
+  function clearForm() {
+    if (!confirm('Clear the form and start over?')) return;
+    ['f-name','f-headline','f-source','f-date','f-hook','f-analysis','f-question']
+      .forEach(id => { document.getElementById(id).value = ''; });
+    document.querySelectorAll('.pill.on').forEach(p => {
+      p.classList.remove('on');
+      const box = document.getElementById('hint-' + p.dataset.fw);
+      if (box) box.classList.remove('show');
+    });
+    localStorage.removeItem('sitn-draft');
+    document.getElementById('draft-badge').textContent = '';
+    document.getElementById('draft-badge').className = 'draft-badge';
+  }
+
+  // ── Modal helpers ─────────────────────────────────────────
+  function openModal(id)  { document.getElementById(id).classList.add('open'); }
+  function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+  function closeOnBg(e, id) { if (e.target.id === id) closeModal(id); }
+
+  // ── Toast ─────────────────────────────────────────────────
+  function toast(msg, type='') {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.className = 'show' + (type ? ' ' + type : '');
+    clearTimeout(el._t);
+    el._t = setTimeout(() => el.className = '', 3000);
+  }
+
+  // ── Escape HTML ───────────────────────────────────────────
+  function esc(s) {
+    return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
+  }
+
+  // ── Instructor token setup ────────────────────────────────
+  function promptToken() {
+    const current = localStorage.getItem('sitn-gh-token') || '';
+    const val = prompt('Paste your GitHub fine-grained PAT (stored in this browser only):', current);
+    if (val === null) return;          // cancelled
+    if (val.trim()) {
+      localStorage.setItem('sitn-gh-token', val.trim());
+      GH.token = val.trim();
+      toast('Token saved in this browser ✓', 'success');
+      refreshPeerCount();
+    } else {
+      localStorage.removeItem('sitn-gh-token');
+      GH.token = '';
+      toast('Token cleared', '');
+    }
+  }
+
+  // Init peer count badge
+  refreshPeerCount();
+</script>
+</body>
+</html>
