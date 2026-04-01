@@ -77,6 +77,12 @@
     /* ── Divider ── */
     .sep { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
 
+    /* ── Section headers (Roman numerals) ── */
+    .part-head { display: flex; align-items: baseline; gap: 10px; margin: 26px 0 6px; }
+    .part-num  { font-size: 11px; font-weight: 700; color: var(--blue); letter-spacing: .08em; min-width: 20px; }
+    .part-title { font-size: 14px; font-weight: 700; color: var(--ink); }
+    .part-sub  { font-size: 12.5px; color: var(--muted); margin: 0 0 10px 30px; line-height: 1.5; }
+
     /* ── Pill framework selector ── */
     .pills { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 10px; }
     .pill {
@@ -174,7 +180,8 @@
     .expand-btn { font-size: 12px; color: var(--blue); background: none; border: none; cursor: pointer; padding: 0; margin-top: 6px; font-weight: 600; }
     .peer-full  { display: none; }
     .peer-full.open { display: block; }
-    .peer-section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-top: 14px; margin-bottom: 4px; }
+    .peer-section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-top: 16px; margin-bottom: 4px; }
+    .peer-part-num { color: var(--blue); margin-right: 3px; }
     .peer-section-body  { font-size: 13.5px; color: var(--ink); line-height: 1.75; white-space: pre-wrap; }
     .peers-empty { text-align: center; padding: 40px 20px; color: var(--muted); font-size: 14px; }
 
@@ -247,13 +254,16 @@
 
       <hr class="sep">
 
+      <div class="part-head"><span class="part-num">I</span><span class="part-title">What caught your attention?</span></div>
+      <p class="part-sub">Start here, not with a framework — what surprised, puzzled, or struck you about this story?</p>
       <div class="field">
-        <label>What caught your attention? <span class="sub">— Start here, not with a framework</span></label>
         <textarea id="f-hook" placeholder="What surprised, puzzled, or struck you about this story? Why does it feel strategically significant?" oninput="autosave()"></textarea>
       </div>
 
+      <div class="part-head"><span class="part-num">II</span><span class="part-title">Framework analysis</span></div>
+      <p class="part-sub">Pick one or two lenses that best illuminate this story, then explain the competitive logic.</p>
       <div class="field">
-        <label>Lens <span class="sub">— Pick one or two frameworks that best illuminate this story</span></label>
+        <label style="font-size:12.5px;color:var(--muted);font-weight:600;margin-bottom:6px;">Lens</label>
         <div class="pills" id="fw-pills">
           <div class="pill" data-fw="external">External Environment</div>
           <div class="pill" data-fw="fiveforces">Five Forces</div>
@@ -302,12 +312,13 @@
       </div>
 
       <div class="field">
-        <label>Your analysis <span class="sub">— use your lens to explain why the firm moved, what it's betting on, and what it means for rivals</span></label>
+        <label style="font-size:12.5px;color:var(--muted);font-weight:600;margin-bottom:6px;">Your analysis</label>
         <textarea id="f-analysis" style="min-height:120px;" placeholder="Push past describing what happened. Explain the competitive logic: Why this move? What tradeoff is being made? Who wins and loses — and why?" oninput="autosave()"></textarea>
       </div>
 
+      <div class="part-head"><span class="part-num">III</span><span class="part-title">A question the article left you thinking about</span></div>
+      <p class="part-sub">Something it made you curious or uncertain about — no obvious answer.</p>
       <div class="field">
-        <label>A question the article left you thinking about <span class="sub">— something it made you curious or uncertain about</span></label>
         <textarea id="f-question" style="min-height:68px;" placeholder="e.g., If a firm's differentiation is built on a capability it no longer owns, is it still differentiating — or just branding?" oninput="autosave()"></textarea>
       </div>
 
@@ -331,8 +342,8 @@
       <button class="close-btn" onclick="closeModal('overlay-example')">✕</button>
     </div>
     <div class="modal-body">
-      <p class="ex-source">Bloomberg · January 12, 2026</p>
-      <p class="ex-title">Apple picks Google's Gemini to power a rebuilt Siri</p>
+      <p class="ex-source">CNBC · January 12, 2026</p>
+      <p class="ex-title">Apple picks Google’s Gemini to run AI-powered Siri coming this year</p>
       <p class="ex-summary">After Apple's internally-built Siri AI failed quality tests (reportedly "failing up to a third of the time"), Apple chose Google's Gemini model to power a completely new version of Siri. Google already pays Apple roughly $20 billion a year to remain the default search engine on iPhone — Apple now turns to the same company to supply the intelligence layer of its most personal interface.</p>
       <div class="ex-tags">
         <span class="ex-tag">Five Forces</span>
@@ -341,14 +352,14 @@
       </div>
 
       <div class="ex-block">
-        <div class="ex-q">What caught your attention?</div>
+        <div class="ex-q"><span style="color:var(--blue);margin-right:5px;">I</span> What caught your attention?</div>
         <div class="ex-a">
           Google pays Apple roughly $20 billion a year for the right to be the default search engine on every iPhone. That arrangement made Apple one of Google's most important distribution partners — and gave Apple a revenue stream that required no engineering. Now Apple is turning to the same company to supply the intelligence layer of a rebuilt Siri. The direction of dependency has shifted: Apple used to collect from Google; now it is paying Google for a capability it could not build itself. Apple has spent thirty years building a reputation on owning the experience end to end — the chip, the OS, the app store, the store where you buy the device. Here, they couldn't. And they said so publicly. Craig Federighi told reporters Siri was <em>"failing up to a third of the time"</em> in internal tests. That kind of admission is rare. It tells you the internal pressure to ship something competitive was greater than the instinct to protect the image.
         </div>
       </div>
 
       <div class="ex-block">
-        <div class="ex-q">Framework analysis</div>
+        <div class="ex-q"><span style="color:var(--blue);margin-right:5px;">II</span> Framework analysis</div>
         <div class="ex-a">
           <strong>Five Forces — Supplier Power:</strong> Apple and Google have long had a mutually dependent relationship. Google needed iPhone distribution; Apple needed search revenue. The bargaining looked roughly balanced. This deal changes that. Apple now relies on Google for search and for the core intelligence layer of Siri. Google has become something closer to essential infrastructure for the iPhone experience. When a supplier becomes infrastructure, the buyer's exit options shrink — and pricing power in future negotiations shifts accordingly.<br><br>
           <strong>RBV:</strong> Apple's chip design, its OS integration, its manufacturing relationships — these remain genuinely hard to replicate. What this story reveals is that the model layer requires a fundamentally different organizational capability: massive datasets, rapid iteration on open-ended language tasks, comfort with probabilistic output. Apple's culture — perfectionism, secrecy, tight release cycles — may be precisely what made building a frontier LLM difficult. <strong>A company's deepest strengths can also define the boundary of what it can build.</strong>
@@ -357,7 +368,7 @@
       </div>
 
       <div class="ex-block">
-        <div class="ex-q">What is Apple betting on — and where does that bet get tested?</div>
+        <div class="ex-q"><span style="color:var(--blue);margin-right:5px;">III</span> A question the article left me thinking about</div>
         <div class="ex-a">
           Apple's differentiation has never been about having the fastest processor or the most features. It's been about the experience feeling seamless, premium, and trustworthy. The bet here is that privacy becomes the differentiator in AI. Apple's system processes queries through what it calls Private Cloud Compute — requests leave the device but are never stored or tied to a user identity. Google, Microsoft, and Meta cannot make that claim credibly, because their revenue models depend on knowing who you are.<br><br>
           The bet gets tested at a specific moment: when a Siri response is wrong, slow, or embarrassing, and the user doesn't know or care that Gemini is underneath it. <strong>Apple owns the brand; Google owns the model.</strong> If the AI experience disappoints, Apple absorbs the reputational cost. That's the structural risk in any differentiation strategy built on a licensed capability — you're staking your position on something you don't fully control.
@@ -574,9 +585,9 @@
           <div class="peer-excerpt">${esc((p.hook||'').slice(0,180))}${(p.hook||'').length > 180 ? '…' : ''}</div>
           <button class="expand-btn" onclick="togglePeer(${i})">Read full post ↓</button>
           <div class="peer-full" id="peer-full-${i}">
-            ${p.hook ? `<div class="peer-section-label">What caught my attention</div><div class="peer-section-body">${esc(p.hook)}</div>` : ''}
-            ${p.analysis ? `<div class="peer-section-label">Analysis</div><div class="peer-section-body">${esc(p.analysis)}</div>` : ''}
-            ${p.question ? `<div class="peer-section-label" style="margin-top:14px;">A question the article left me thinking about</div><div class="peer-section-body" style="font-style:italic;">${esc(p.question)}</div>` : ''}
+            ${p.hook ? `<div class="peer-section-label"><span class="peer-part-num">I</span> What caught my attention</div><div class="peer-section-body">${esc(p.hook)}</div>` : ''}
+            ${p.analysis ? `<div class="peer-section-label"><span class="peer-part-num">II</span> Framework analysis</div><div class="peer-section-body">${esc(p.analysis)}</div>` : ''}
+            ${p.question ? `<div class="peer-section-label"><span class="peer-part-num">III</span> A question the article left me thinking about</div><div class="peer-section-body" style="font-style:italic;">${esc(p.question)}</div>` : ''}
           </div>
         </div>`).join('');
     } catch {
