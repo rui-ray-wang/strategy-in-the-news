@@ -1,5 +1,16 @@
 [
   {
+    "name": "Evan Zhao",
+    "headline": "OpenAI Is Shutting Down Sora – Here's What You Need To Know",
+    "source": "AOL",
+    "date": "Mar 26, 2026",
+    "hook": "It was back in September 2025 when OpenAI launched Sora 2 and it made headlines, seeming to be quite successful. They even secured a $1 billion partnership with Disney. It is quite surprising that OpenAI suddenly decided to shut down Sora. This should be a signal of a strategic pivot. Specifically, reports suggest Sora had a very heavy computation cost of up to $15 million per day, while user engagement was also dropping. It seems that OpenAI is refocusing on its core competitive arena. Sora seemed to have been a “side quest” distracting from the high-stakes race in text and code generation, where rivals like Anthropic are gaining lots of ground.",
+    "frameworks": "Five Forces, RBV",
+    "analysis": "Sora consumed massive GPU resources, much more than text or code generation. OpenAI’s most constrained and strategically valuable resource is compute capacity. Allocating that capacity to a low-margin and low-retention consumer video generation service was not appealing. The tradeoff would be that by killing Sora, high cost computation resources would be less constraint for use of other core products like ChatGPT. Moreover, this also promotes engineering focus on these other core products. It is also where many customers rely on these services from OpenAI more for reliability and scale. Companies that are negatively impacted by this decisions would be Disney, whose $1B deal evaporated. Similarly, creators who invested time building workflows around Sora. In terms of five forces, the high supplier power of GPU scarcity made video generation which is compute-intensive very expensive. Moreover, OpenAI allowed buyers to use a flat subscription which was great for the buyers, but terrible for their margins.",
+    "question": "If OpenAI is no longer focusing on video generation to cut cost, how will this impacts goals on developing a multimodal AI? Also, will there ever be breakthroughs in efficiency to eventually make high-quality video generation viable at scale? Maybe Sora's shutdown is only temporary...",
+    "ts": "Apr 2, 2026, 8:21 PM"
+  },
+  {
     "name": "Rui Wang",
     "headline": "After Apple's internally-built Siri AI failed quality tests (reportedly \"failing up to a third of the time\"), Apple chose Google's Gemini model to power a completely new version of Siri.",
     "source": "CNBC",
