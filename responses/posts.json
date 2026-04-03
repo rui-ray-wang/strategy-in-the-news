@@ -1,5 +1,16 @@
 [
   {
+    "name": "Haoyu Xiao",
+    "headline": "CATL Partners With JD.com, GAC on Low-Cost EV",
+    "source": "Caixin",
+    "date": "Nov. 10, 2025",
+    "hook": "Some consumers in the electric vehicle (EV) industry still struggle with issues such as range anxiety and long queues at charging stations. AION UT Super, a battery-swappable model developed through tripartite cooperation between CATL, JD.com, and GAC Group, has recently been launched. CATL provides battery leasing and battery swap services and plans to build 1,000 Chocolate Battery Swap Stations by the end of 2025. Under the battery-swapping model with separate vehicle and battery ownership, battery manufacturers like CATL have shifted their role from traditional 'suppliers' to 'complementors'. As a new form of complement, the battery swapping system has the potential to reshape the competitive landscape of the entire EV industry.",
+    "frameworks": "",
+    "analysis": "This news story highlights the strategic power of complements – a factor not explicitly included in Porter's Five Forces, a framework that centers on 'competitive' forces rather than 'cooperative' relationships. Unlike substitutes, complements enhance the value of products in an industry. Specifically, as CATL improves the quality of Chocolate Batteries, expands its battery swap station network, and shortens swap time, the attractiveness of AION UT Super to customers will strengthen, enabling the model to achieve a stronger market position within the EV sector.\nIn addition, complements can influence the other five forces. For instance, standardized batteries together with a dense battery swap network can reduce EV manufacturers’ R&D and adaptation costs related to battery packs and charging systems, thereby lowering industry entry barriers and attracting more potential entrants to compete in the EV market.",
+    "question": "Although CATL’s Chocolate Battery Swap service enhances the value of GAC AION’s electric vehicles, how this jointly created value is distributed between the focal firm (EV manufacturers) and its complementors (battery swap service providers) ultimately depends on the complementors’ bargaining power. When collaborating with battery giants such as CATL, how can EV manufacturers capture a greater share of the value? And how should they manage their strategic relationships with complementors?",
+    "ts": "Apr 3, 2026, 12:08 PM"
+  },
+  {
     "name": "Evan Zhao",
     "headline": "OpenAI Is Shutting Down Sora – Here's What You Need To Know",
     "source": "AOL",
