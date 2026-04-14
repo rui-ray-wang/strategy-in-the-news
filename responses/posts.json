@@ -1,6 +1,17 @@
 [
   {
     "name": "Maxime Bernard",
+    "headline": "GM Idles Factory Zero Again, Lays Off 1,300 EV Workers for a Month",
+    "source": "Electrek",
+    "date": "March 31, 2026",
+    "hook": "GM poured $2.2 billion into converting the former Detroit-Hamtramck plant into Factory Zero, an EV-only facility that was supposed to anchor the company's \"all-electric future.\"  However, now it has been shut down twice in three months. That's not a minor production hiccup that's a pretty public reversal of a strategy GM staked a lot of its identity on. The part that really stood out: meanwhile, GM's Flint Assembly plant, which produces internal combustion engine vehicles, will increase operations to six days per week from June 2026, right as the EV flagship goes dark.",
+    "frameworks": "External Environment, Five Forces",
+    "analysis": "1) The external environment : GM’s EV sales declined sharply in Q4 2025 after the U.S. administration ended the $7,500 federal EV tax credit on September 30. This illustrates how a single regulatory decision can rapidly reshape an industry. GM did not necessarily misjudge product development; rather, underlying demand was significantly reduced by the policy change. This shows how vulnerable are industries relying on political decisions.\n\n2) From a five forces perspective, the threat of substitutes is currently very strong, with internal combustion engine, ICE, trucks significantly outperforming EV trucks in the U.S. market. Despite these challenges, GM announced a $6 billion share buyback and increased dividends, suggesting a shift toward reinforcing investor confidence by relying on its more profitable ICE segment. This reflects a classic tradeoff between short-term financial performance and long-term strategic positioning. The risk is that while GM slows its EV efforts, competitors with greater financial flexibility or more supportive regulatory environments may continue to strengthen their capabilities in this area.\nIn 2025, GM recorded $7.6 billion in EV-related charges, including a $6 billion writedown associated with cancelling production plans and battery supply agreements. This goes beyond a simple sunk cost; it indicates that the original EV investment strategy was heavily dependent on a policy environment that ultimately proved unstable.",
+    "question": "If GM scales back EV capacity now and gas trucks keep printing money, at what point does this \"temporary pause\", as GM says, become a permanent strategic retreat, and how far behind does that leave them when EV demand actually recovers?",
+    "ts": "Apr 14, 2026, 2:32 PM"
+  },
+  {
+    "name": "Maxime Bernard",
     "headline": "Nike's Gross Margin Drag & Tariff Costs Loom: Can It Protect Profits?",
     "source": "Yahoo Finance",
     "date": "Apr 1, 2026",
