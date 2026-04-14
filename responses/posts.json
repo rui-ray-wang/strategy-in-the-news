@@ -1,5 +1,16 @@
 [
   {
+    "name": "Maxime Bernard",
+    "headline": "Nike's Gross Margin Drag & Tariff Costs Loom: Can It Protect Profits?",
+    "source": "Yahoo Finance",
+    "date": "Apr 1, 2026",
+    "hook": "What is intriguing about Nike is that it is facing a self-inflicted strategic injury while simultaneously being hit by an external shock, both multiplying each other and creating a scenario that is very challenging to decipher. Nike’s margins declined in the third quarter, partly because of tariffs in North America. At the same time, the company took a large charge to restructure its supply chain and technology.\nThis means Nike is not only dealing with external pressure like tariffs, but also fixing internal cost issues that already existed.\nSo it’s not just a tariff story, it’s a company trying to reorganize itself while facing challenges at the same time.",
+    "frameworks": "External Environment, Cost Leadership",
+    "analysis": "From an external environment perspective, the situation is pretty clear: U.S. tariffs have seriously changed how global sourcing works. Nike relies heavily on countries like Vietnam, China, and Cambodia for production, so when tariffs hit those regions, it wasn’t just a small issue, it affected their whole business model. In a way, changes in politics and regulation didn’t just pressure Nike, they forced it to rethink a strategy it had used for decades.\nLooking at it from a cost leadership perspective, the problem becomes even more obvious. Nike’s advantage has always been based on producing at low cost through outsourcing, while focusing its money on branding and innovation. But now, with rising production costs, that advantage is being weakened. Nike is trying to respond by changing where it sources from, working with suppliers, increasing prices, and cutting internal costs. The issue is that each of these comes with downsides, higher prices could reduce demand, cost cuts could hurt performance, (and shifting suppliers takes time).\nThe biggest challenge is timing. Building new supply chains doesn’t happen quickly, so Nike will likely stay exposed in the short term no matter what. At the same time, the benefits from its restructuring won’t show up immediately, which creates a gap where the company is more vulnerable. Overall, Nike is in a tough position: it built its success on a global cost structure that is now being disrupted, and it has to rebuild it while still running its day-to-day operations.",
+    "question": "If Nike and its competitors are all simultaneously relocating production to the same Southeast Asian countries (Indonesia, Vietnam, Mexico) does the cost advantage simply migrate there and reset at a higher floor? In other words: is Nike solving the tariff problem, or just deferring it while shifting the risk to another concentration point?",
+    "ts": "Apr 14, 2026, 2:02 PM"
+  },
+  {
     "name": "Tony Pun",
     "headline": "Alibaba leads $290 million investment for building a new kind of AI model as LLM limits emerge",
     "source": "CNBC",
