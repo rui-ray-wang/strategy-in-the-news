@@ -1,6 +1,17 @@
 [
   {
     "name": "Yin Shiyuan",
+    "headline": "How Qantas used AI to land (more) on time and save $30m",
+    "source": "Australian Financial Review",
+    "date": "May 8, 2026",
+    "hook": "What caught my attention was that Qantas used AI not just to cut costs, but also to improve customer experience by making flights more punctual. The airline reportedly saved around $30 million by using AI to manage aircraft turnaround timing and operations more efficiently. This feels strategically significant because airlines usually compete heavily on price in a very competitive industry. However, Qantas is trying to compete differently by combining lower operating costs with a better travel experience. Instead of only focusing on cheaper tickets, the company is using technology to improve reliability and efficiency at the same time.",
+    "frameworks": "Cost Leadership, Differentiation, Blue Ocean",
+    "analysis": "Cost leadership: Qantas is using AI to reduce operational inefficiencies and lower costs. Improving aircraft turnaround times helps reduce delays, fuel waste, and scheduling problems, allowing the airline to save money and use resources more efficiently. AI also helps predict maintenance issues before they become expensive problems. This supports a cost leadership strategy because lower operating costs can improve profitability and help Qantas remain competitive in the airline industry\n\nBlue ocean strategy: At the same time, Qantas is creating differentiation through reliability and smarter operations. Many airlines mainly compete on price, but Qantas is trying to create unique value by offering a smoother and more punctual flying experience. This helps the airline move away from pure price competition and create a stronger premium image. Instead of competing directly in a “red ocean” of airline price wars, Qantas is using AI to create a better customer experience that competitors may struggle to copy quickly.",
+    "question": "If more airlines adopt similar AI systems in the future, will improved reliability still be a competitive advantage, or will it simply become the basic standard customers expect from every airline?",
+    "ts": "May 13, 2026, 1:22 PM"
+  },
+  {
+    "name": "Yin Shiyuan",
     "headline": "Mark Zuckerberg Claims One AI Worker Now Replaces Dozens as 8,000 Layoffs Loom",
     "source": "International business times",
     "date": "10 May 2026",
