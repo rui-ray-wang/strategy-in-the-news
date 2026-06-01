@@ -1,5 +1,16 @@
 [
   {
+    "name": "Tony Pun",
+    "headline": "Meet This Pick and Shovel Ai Stock That Just Joined Meta, Tesla, and Broadcom as the Newest Member of the $1 Trillion Club",
+    "source": "The Motley Fool",
+    "date": "May 30, 2026",
+    "hook": "Micron Technology's stock is up sharply because of increased supply of memory chips for AI systems—not GPUs. As AI demand grows, the need for memory hardware like HBM has created a surplus, driving Micron's stock higher despite its smaller market share compared to Samsung and SK Hynix.",
+    "frameworks": "External Environment, Focused Strategy",
+    "analysis": "AI demand across the semiconductor supply chain has driven the stocks of hardware producers like Micron and SK Hynix sharply higher compared to last year. A surplus of chip hardware, fueled by strong external demand, has pushed these companies' stock prices up.\n\nMicron focuses on building GPUs, which are key for training large language models (LLMs). Recently, Micron also designed a new HBM (High Bandwidth Memory) model specifically for Nvidia’s Vera Rubin GPU platform. Even though Micron has a smaller market share than its main competitors Samsung and SK Hynix, the surplus demand for GPUs and HBM still presents a huge opportunity. SK Hynix's stock has risen about 150% so far, indicating that profit potential remains high.",
+    "question": "I think it's time to buy now! Micron could be the next SK Hynix.",
+    "ts": "Jun 1, 2026 at 12:20 PM"
+  },
+  {
     "name": "Aaron Miller",
     "headline": "After Ferrari Luce backlash, Lamborghini CEO says canceling its own EV was the right choice",
     "source": "https://www.cnbc.com/2026/05/27/ferrari-luce-backlash-lamborghini-ceo-ev.html",
