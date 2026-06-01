@@ -1,5 +1,16 @@
 [
   {
+    "name": "Su Fei Li",
+    "headline": "GameStop Proposes Acquiring eBay for $55 Billion",
+    "source": "The New York Times",
+    "date": "May 1, 2026",
+    "hook": "What struck me most about this story is how bold and risky GameStop’s bid for eBay is. Strategically, the deal seems to be an attempt to transform GameStop from a video game retailer into a broader commerce platform by combining eBay’s online marketplace with GameStop’s physical stores for authentication, fulfillment, and collectibles-related services. However, the deal also feels puzzling because the strategic fit is not obvious, and GameStop may be taking on major financing and integration risks to acquire a much larger company. This feels significant because it highlights a key M&A question: whether an acquisition truly creates synergy, or whether it becomes an overambitious diversification move.",
+    "frameworks": "RBV",
+    "analysis": "Using the RBV lens, GameStop’s bid seems like an attempt to turn its remaining physical store network, collectibles reputation, and loyal retail-investor following into strategic assets. The competitive logic is that eBay has the marketplace scale, while GameStop could add physical stores for authentication, intake, fulfillment, and live commerce, especially in categories like trading cards and collectibles. If these resources are actually complementary, the combined company could create a more differentiated resale platform that is harder for purely online competitors to copy.\n\nHowever, from a Five Forces perspective, the move also reflects pressure from intense competition in online commerce, especially from Amazon and newer resale platforms. The tradeoff is that GameStop may gain scale and relevance faster through acquisition, but it also takes on major financing and integration risk. The likely winners could be eBay shareholders, who may receive a premium, and possibly collectors who benefit from stronger authentication services. The losers could be GameStop shareholders if the deal overextends the company or if the expected synergies do not materialize. Strategically, the story matters because it tests whether GameStop is making a real platform-building move or an overambitious diversification decision.",
+    "question": "Can GameStop turn its meme stock popularity into a real business advantage, or is it using market attention to chase a risky deal that may not actually make strategic sense?",
+    "ts": "Jun 1, 2026, 2:28 PM"
+  },
+  {
     "name": "Tony Pun",
     "headline": "Meet This Pick and Shovel Ai Stock That Just Joined Meta, Tesla, and Broadcom as the Newest Member of the $1 Trillion Club",
     "source": "The Motley Fool",
