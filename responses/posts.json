@@ -1,5 +1,16 @@
 [
   {
+    "name": "Khooaroon Kannaphat",
+    "headline": "People are flooding AI chatbots with health questions. Microsoft is teaming up with Mayo Clinic to help.",
+    "source": "CNN",
+    "date": "Jun 3, 2026",
+    "hook": "Patients are surprisingly willing to trust an AI, but the legal and ethical bottleneck has always been, \"Who is responsible when the AI gets a diagnosis wrong?\". Tech giants like Microsoft are terrified of medical liability. What caught my attention is how this partnership elegantly solves that bottleneck. Microsoft isn't just using Mayo Clinic's data; they are essentially \"renting\" Mayo's institutional trust and legal accountability.",
+    "frameworks": "RBV",
+    "analysis": "The Competitive Logic: Raw computing power and foundational AI models are becoming commoditized — everyone has them. But clinically validated, longitudinal patient data is incredibly rare and fiercely protected. Furthermore, institutional trust (the Mayo Clinic brand) cannot be replicated by a tech company, no matter how much money they spend.\n\nWhy this move? Microsoft knows it cannot build a medical brand from scratch; it needs Mayo's proprietary data and trust as a shield to enter the highly regulated healthcare market. Conversely, Mayo Clinic realizes its world-class expertise is geographically limited to its physical hospitals. They need Microsoft's infrastructure to scale their medical brain globally.\n\nThe Trade-offs: Mayo Clinic is trading exclusivity. By digitizing their expertise, they risk commoditizing their own doctors — why fly to Minnesota if your local hospital has the \"Mayo AI\"? They are also taking on massive reputational risk. Microsoft, meanwhile, trades away total control and margins, having to share the healthcare vertical rather than dominating it alone.\n\nWinners & Losers:\n\nWinners: Microsoft (gains market access without medical liability) and Mayo Clinic (scales their brand globally without building physical hospitals).\n\nLosers: Standalone health-tech startups. They might have great algorithms, but without a gold-standard partner providing proprietary data and legal cover, hospital buyers won't trust them.",
+    "question": "Who ultimately commoditizes whom in the long run?",
+    "ts": "Jun 4, 2026, 1:51 PM"
+  },
+  {
     "name": "Shi Luo Fei",
     "headline": "ByteDance rolls out AI voice assistant for Chinese smartphones",
     "source": "Reuters",
