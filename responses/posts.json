@@ -1,6 +1,17 @@
 [
   {
     "name": "Khooaroon Kannaphat",
+    "headline": "Eli Lilly’s top dealmaker says don’t be surprised to see more M&A that pushes Lilly into new areas",
+    "source": "CNBC",
+    "date": "Jun 3, 2026",
+    "hook": "What caught my attention is how Eli Lilly is leveraging a massive opportunity to build an even larger, long-term empire. Watching the world's most valuable pharma giant step completely out of its comfort zone to acquire businesses in unchartered therapeutic areas is fascinating. While this strategy is inherently riskier, it feels highly promising because they are intentionally targeting de-risked, late-stage biotechs. At the same time, this aggressive expansion raises a critical question: how will antitrust regulators control a company that is becoming this massive?",
+    "frameworks": "RBV, Focused Strategy",
+    "analysis": "Focused Strategy: Eli Lilly's current massive windfall is actually the result of a hyper-focused strategy: they doubled down on metabolic diseases (GLP-1s for diabetes and obesity) and won big. However, having over 70% of your revenue tied to one focused therapeutic area creates a massive strategic vulnerability known as a \"patent cliff.\" To survive, they are using the profits from one hyper-focused niche to fund acquisitions in other highly specialized, high-margin niches (like targeted CAR-T therapies for blood cancers or gene-editing for kidney disease). They are actively pivoting away from a single point of failure. They aren't trying to become a generalist, mass-market drug company. Instead, they are building a portfolio of distinct \"focused differentiation\" pillars. By acquiring biotechs in complex, hard-to-treat diseases, they ensure they can continue commanding premium enterprise pricing in new verticals once the obesity market eventually cools down or faces generic competition.\nRBV: Right now, Eli Lilly possesses a massive influx of cash. However, cash is fundamentally not a VRIN resource—it is easily replicable by any highly profitable company. If Lilly simply holds onto cash, their competitive advantage vanishes the moment their patents expire. Proprietary biotech platforms, exclusive gene-editing techniques, and late-stage clinical trial data, however, are VRIN resources. By aggressively buying mid-to-late-stage startups rather than early-stage ones, they are effectively buying exclusive \"moats\" and de-risked science that competitors cannot legally copy or quickly reproduce.",
+    "question": "If the ultimate financial goal of every small biotech startup is simply to \"get acquired by Eli Lilly\" because no one else can afford to fund late-stage clinical trials, how does that change the nature of medical innovation?",
+    "ts": "Jun 4, 2026, 3:35 PM"
+  },
+  {
+    "name": "Khooaroon Kannaphat",
     "headline": "Cognac is in a slump. Hennessy thinks it has a fix",
     "source": "CNN",
     "date": "Jun 1, 2026",
