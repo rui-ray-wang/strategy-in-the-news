@@ -1,6 +1,17 @@
 [
   {
     "name": "Khooaroon Kannaphat",
+    "headline": "Cognac is in a slump. Hennessy thinks it has a fix",
+    "source": "CNN",
+    "date": "Jun 1, 2026",
+    "hook": "What stood out to me is that Hennessy is such an old, premium, and expensive brand, so seeing their sales drop really exposes how much the market has changed. Since I personally am interested in spirits, it’s very unexpected to see a traditional brand like Hennessy release something so new and trendy.",
+    "frameworks": "External Environment",
+    "analysis": "In this case, Hennessy is being aggressively squeezed by two major external forces: Sociocultural shifts (Gen Z and Millennials changing how they drink) and Political/Economic pressures (US and China tariffs). The traditional cognac category is fundamentally misaligned with current sociocultural trends. Younger consumers prioritize convenience, approachability, and different flavor profiles (like premium tequila or ready-to-drink options) over sipping neat brown spirits. Simultaneously, geopolitical tariffs are heavily taxing their traditional export model. Hennessy is essentially \"hacking\" this harsh external environment by changing their product format to fit the new social reality, rather than waiting for the environment to change back to favor it.\nThis is a strict environmental adaptation strategy. Hennessy cannot force Gen Z to adopt traditional cognac rituals, nor can it magically erase international tariffs. By launching ready-to-serve cocktails, they lower the barrier to entry, bypass the intimidation factor of traditional spirits, and intercept younger consumers exactly where their new habits are formed—at casual, convenience-driven social occasions.\nThe critical trade-off is Prestige vs. Volume. Hennessy is trading the elite exclusivity of a 261-year-old luxury house for mass accessibility. Putting a luxury spirit into a pre-mixed format inherently dilutes the brand's high-end aura. They risk cheapening the brand in the eyes of their older, traditional consumers to chase the spending power of a younger demographic.",
+    "question": "By making the brand more accessible to Gen Z and Millennials, does Hennessy risk alienating its core, legacy customers? Could this move ultimately dilute their premium image?",
+    "ts": "Jun 4, 2026, 2:31 PM"
+  },
+  {
+    "name": "Khooaroon Kannaphat",
     "headline": "People are flooding AI chatbots with health questions. Microsoft is teaming up with Mayo Clinic to help.",
     "source": "CNN",
     "date": "Jun 3, 2026",
