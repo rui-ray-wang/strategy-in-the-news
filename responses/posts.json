@@ -1,5 +1,16 @@
 [
   {
+    "name": "Lim Ming Yang",
+    "headline": "Anthropic calls for pause of global AI development",
+    "source": "https://www.channelnewsasia.com/world/anthropic-pause-global-ai-development-6163531",
+    "date": "5 June 2026",
+    "hook": "The most striking thing is the strategic paradox at the heart of the announcement: a frontier AI company, whose commercial value depends on building ever-more-powerful models, publicly arguing that the entire industry should consider stopping. That's unusual corporate behaviour, and the sceptics quoted in the piece zero in on exactly why even though critics may argue it could be a way to slow rivals under the cover of safety concerns. Whether sincere or self-serving (or both), it's a fascinating move to dissect strategically. The second thing worth flagging is the nuclear-treaty analogy combined with the admission that verification is much harder here.",
+    "frameworks": "External Environment, Five Forces",
+    "analysis": "External Environment: The dominant force is political-geopolitical. Anthropic frames the core obstacle as competitive and geopolitical pressure, specifically US–China dynamics, where companies and governments must make safety decisions without a coordination mechanism. This is a classic collective-action problem where the technology outpaces the regulatory and societal structures meant to govern it. The environment is high-velocity and low-trust, which is precisely the condition under which voluntary restraint fails. \n\nFive Forces: The interesting application here is that Anthropic is trying to alter the rivalry dimension itself. Competitive rivalry among frontier labs is intense and racing-driven — the \"if one stops, others race ahead\" logic is textbook prisoner's-dilemma rivalry. A coordinated pause is effectively an attempt to convert destructive rivalry into a regulated oligopoly with agreed rules, which would also raise barriers to entry (verification regimes are expensive and favor incumbents). So the proposal, read cynically, strengthens the position of established players against new entrants.",
+    "question": "When a market leader calls for the whole industry to slow down, how do you tell genuine precaution from competitive maneuvering, and does the answer even matter if the proposed outcome (more safety coordination) is desirable regardless of motive?",
+    "ts": "Jun 5, 2026, 11:41 AM"
+  },
+  {
     "name": "Khooaroon Kannaphat",
     "headline": "Eli Lilly’s top dealmaker says don’t be surprised to see more M&A that pushes Lilly into new areas",
     "source": "CNBC",
