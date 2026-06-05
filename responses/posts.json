@@ -1,6 +1,17 @@
 [
   {
     "name": "Lim Ming Yang",
+    "headline": "CEO Jamie Dimon to pitch JPMorgan’s ultra-rich clients on SpaceX IPO",
+    "source": "https://www.businesstimes.com.sg/companies-markets/telcos-media-tech/ceo-jamie-dimon-pitch-jpmorgans-ultra-rich-clients-spacex-ipo",
+    "date": "4 June 2026",
+    "hook": "Two things stood out for me. First, the sheer scale and theatricality of the distribution machine, where the CEO of the largest US bank personally fronting a coast-to-coast simulcast to 2,500 wealthy clients, is described as \"unprecedented,\" and that word is doing a lot of work. This isn't underwriting in the traditional quiet sense, it's a retail-style demand-generation event for an asset most of these clients can't normally touch. Second, the reconciliation subplot: JPMorgan's involvement is striking given it sued Musk's Tesla in 2021 over stock-warrant transactions before dropping the suit. Watching a bank that recently litigated against the founder now mobilize its CEO to sell his company's shares is a vivid illustration of how transactional these relationships are when the deal is big enough.",
+    "frameworks": "Five Forces, Blue Ocean",
+    "analysis": "Five Forces: Rivalry among the bulge-bracket banks is the core dynamic. SpaceX tapped Goldman Sachs, JPMorgan, Bank of America, and Morgan Stanley to lead the IPO, and Morgan Stanley holds the strongest position thanks to its longstanding relationship with Musk. JPMorgan is not \"lead left,\" so this client roadshow is a way to compete on a different axis, when it can't win on relationship primacy. Buyer power here is unusual: the \"buyer\" is twofold (SpaceX as the issuer choosing banks, and the wealthy clients as the ultimate purchasers), and JPMorgan is using its grip on the second to make itself indispensable to the first.\n\nBlue Ocean: By turning IPO allocation into a branded, CEO-led \"live experience\" for wealthy clients, JPMorgan is reframing what bank-client engagement looks like, shifting from transactional allocation toward relationship theatre that competitors haven't matched at this scale. The contestable question is whether this is a genuinely new value curve or simply a louder version of what private banks already do",
+    "question": "When a bank's CEO personally markets a single IPO to thousands of clients, where does sophisticated client service end and conflicted salesmanship begin? The bank earns fees for placing the shares, which creates a structural incentive to generate enthusiasm regardless of whether the deal suits any individual client. It made me wonder how a buyer should weigh \"we're giving you rare access\" against \"we're paid to sell you this,\" and whether the spectacle itself, the CEO, the simulcast, the SpaceX executives, is partly engineered to blur exactly that line.",
+    "ts": "Jun 5, 2026, 12:06 PM"
+  },
+  {
+    "name": "Lim Ming Yang",
     "headline": "Anthropic calls for pause of global AI development",
     "source": "https://www.channelnewsasia.com/world/anthropic-pause-global-ai-development-6163531",
     "date": "5 June 2026",
