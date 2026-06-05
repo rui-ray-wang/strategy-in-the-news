@@ -1,6 +1,17 @@
 [
   {
     "name": "Lim Ming Yang",
+    "headline": "Climate risks in volatile times",
+    "source": "https://www.businesstimes.com.sg/companies-markets/boardroom-matters/climate-risks-volatile-times",
+    "date": "5 Jun 2026",
+    "hook": "The sharpest idea is \"risk myopia\" where the author framed that urgent near-term pressures (the Iran war, the energy crunch, inflation) crowd out slower-moving but equally material risks like climate exposure. What makes it land is that she doesn't moralize about it; she treats the board's temptation to cut climate commitments as a rational-feeling response to genuine pressure, then shows why the math is wrong. The coal example is the crux: reverting to coal-fired power keeps production running today but can lock a business into higher emissions, ageing infrastructure, and steeper transition costs later. The second thing that struck me is the inversion at the end. She reframes climate reporting from a compliance burden into a decision-making instrument, arguing the disclosure process itself gives boards visibility into whether a short-term fix is real resilience or just deferred cost. That's a more interesting claim than the usual \"do good, it pays\" line.",
+    "frameworks": "Cost Leadership, Differentiation",
+    "analysis": "Cost Leadership & Differentiation: The author blurs the usual trade-off deliberately. Energy efficiency is framed as a move that lowers cost and emissions simultaneously, a \"both/and\" rather than the textbook either/or. Where she separates them, differentiation wins: the SGX RegCo–Schneider Electric study she cites found six in ten listed companies have identified new business opportunities linked to climate change and are building new segments around them. So climate competency becomes a differentiator tied to revenue and investor confidence, not just a cost line.",
+    "question": "The piece argues boards should resist short-term fixes and invest in climate resilience now. However, it largely assumes the long-term payoff materialises, as it did for Amazon. The question it left me with: how should a board weigh that bet when the near-term threat (keeping the lights and the production line on during an energy crisis) is concrete and immediate, while the long-term return is probabilistic and depends on regulators, customers, and energy markets behaving as forecast?",
+    "ts": "Jun 5, 2026, 12:17 PM"
+  },
+  {
+    "name": "Lim Ming Yang",
     "headline": "CEO Jamie Dimon to pitch JPMorgan’s ultra-rich clients on SpaceX IPO",
     "source": "https://www.businesstimes.com.sg/companies-markets/telcos-media-tech/ceo-jamie-dimon-pitch-jpmorgans-ultra-rich-clients-spacex-ipo",
     "date": "4 June 2026",
