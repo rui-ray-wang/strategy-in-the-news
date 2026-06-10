@@ -1,5 +1,16 @@
 [
   {
+    "name": "Sofiia Afanaseva",
+    "headline": "Microsoft unveils new AI models to lessen reliance on OpenAI and lower costs",
+    "source": "CNBC",
+    "date": "June 2, 2026",
+    "hook": "I was surprised by how openly Microsoft is trying to reduce its heavy dependence on OpenAI. After years of a very close partnership where Microsoft poured billions into OpenAI, the company is now aggressively building its own proprietary AI models. It feels like a classic strategic pivot from “rely on a partner” to “build internal capability”.",
+    "frameworks": "Five Forces, RBV",
+    "analysis": "Through the RBV lens, this move is about developing rare and valuable resources internally. Microsoft has realized that relying too much on OpenAI’s models creates a vulnerability, it doesn’t fully control a critical input for its Azure cloud and Copilot products. By investing in its own models, Microsoft is trying to build a sustainable competitive advantage in AI technology and reduce imitation risks. However, the article also hints at the difficulty: building frontier AI requires massive data, talent, and infrastructure, resources that are extremely hard to replicate quickly.\nFrom a Five Forces perspective, this is clearly about reducing supplier bargaining power. OpenAI had become a powerful supplier with significant leverage over Microsoft. By developing in-house alternatives, Microsoft is weakening this supplier power and lowering long-term costs for developers using Azure. This also raises barriers to entry for smaller competitors who still depend on third-party models.",
+    "question": "If even a giant like Microsoft struggles to keep up with AI development and has to invest heavily to reduce reliance on a partner, how will smaller companies survive in this race? Will we see more consolidation, or will specialized AI providers become the new essential infrastructure that everyone has to pay for?",
+    "ts": "Jun 10, 2026, 3:32 PM"
+  },
+  {
     "name": "Lim Ming Yang",
     "headline": "Climate risks in volatile times",
     "source": "https://www.businesstimes.com.sg/companies-markets/boardroom-matters/climate-risks-volatile-times",
